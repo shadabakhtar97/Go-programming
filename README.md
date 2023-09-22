@@ -52,5 +52,99 @@ func main() {
 
 In this example, the `divide` function returns an error if the second argument is zero, indicating a division by zero error. The `main` function checks for errors returned by `divide` and handles them accordingly.
 
+### -------------------------------------------------------------------------------------------------------------------------------------
+#### How to handle errors in Go programming language ?
+In Go programming, error handling is a crucial part of writing reliable and robust code. Go encourages explicit error handling, and there are several common patterns and techniques for handling errors effectively:
+
+1. Return Errors: Functions that can encounter errors should return both a result and an error value. This is a common practice in Go.
+
+   ```go
+   func divide(a, b int) (int, error) {
+       if b == 0 {
+           return 0, errors.New("division by zero")
+       }
+       return a / b, nil
+   }
+   ```
+
+   When calling this function, you can check the error value to determine if an error occurred:
+
+   ```go
+   result, err := divide(10, 0)
+   if err != nil {
+       // Handle the error
+       fmt.Println("Error:", err)
+   } else {
+       fmt.Println("Result:", result)
+   }
+   ```
+
+2. Use `errors.New` or `fmt.Errorf`: You can create custom error messages using `errors.New` or `fmt.Errorf` to provide meaningful information about the error.
+
+   ```go
+   import "errors"
+
+   func openFile(filename string) (file *File, err error) {
+       // ...
+       if fileNotFound {
+           return nil, errors.New("file not found")
+       }
+       // ...
+   }
+   ```
+
+3. Error Wrapping: You can use the `fmt.Errorf` function to wrap errors with additional context, making it easier to trace the source of an error:
+
+   ```go
+   import "fmt"
+
+   func processFile(filename string) error {
+       // ...
+       if err := openFile(filename); err != nil {
+           return fmt.Errorf("failed to open file: %w", err)
+       }
+       // ...
+   }
+   ```
+
+   This allows you to use `%w` to wrap an error while preserving the original error information.
+
+4. Custom Error Types: You can define your custom error types by creating structs that implement the `error` interface. This can be useful for more structured error handling.
+
+   ```go
+   type MyError struct {
+       ErrorCode    int
+       ErrorMessage string
+   }
+
+   func (e *MyError) Error() string {
+       return fmt.Sprintf("Error %d: %s", e.ErrorCode, e.ErrorMessage)
+   }
+   ```
+
+5. `panic` and `recover`: In exceptional cases where an error is catastrophic and should halt the program, you can use `panic` to stop the normal flow of execution. You can then recover from the panic using the `recover` function to handle it gracefully.
+
+   ```go
+   func someFunction() {
+       defer func() {
+           if r := recover(); r != nil {
+               fmt.Println("Recovered from panic:", r)
+           }
+       }()
+   
+       // ...
+       if somethingBadHappened {
+           panic("Something bad happened")
+       }
+       // ...
+   }
+   ```
+
+6. Error Propagation: In a larger application, you might need to propagate errors up the call stack to handle them at a higher level. This involves returning errors from lower-level functions and checking them in higher-level functions.
+
+Remember that the appropriate error-handling strategy depends on the specific needs of your application and the nature of the errors you expect to encounter. Go's philosophy is to make error handling explicit and clear, so you should aim to provide informative error messages and handle errors in a way that makes your code more reliable and maintainable.
+
+
+
 Go encourages explicit error handling to ensure robust and reliable code. Developers are expected to check for errors and decide how to handle them, whether that involves logging the error, retrying an operation, or taking some other appropriate action.
 
