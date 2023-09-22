@@ -1,4 +1,4 @@
-# go-programming
+# Go-programming
 We will cover golang or go programming  from basic to advance
 
 ### Error Handling in Go Programming
