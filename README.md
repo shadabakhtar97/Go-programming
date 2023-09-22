@@ -1,7 +1,7 @@
 # Go-programming
 We will cover golang or go programming  from basic to advance
 
-### Error Handling in Go Programming
+# Error Handling in Go Programming
 ### What is an Error in go programming ?
 
 In Go programming, an error is a value that represents an abnormal or unexpected condition that has occurred during the execution of a program. Errors are used to signal and handle exceptional situations, such as file not found, network connection issues, division by zero, or any other circumstance that can prevent a program from executing as intended.
