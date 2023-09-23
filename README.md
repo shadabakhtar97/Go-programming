@@ -61,6 +61,37 @@ In the Go programming language (often referred to as Golang), a function is a re
 
 Functions in Go are a powerful way to structure code, promote reusability, and improve code maintainability. They are essential in building complex applications in the Go programming language.
 
+### What is meaning of float64 in go programming lanuage ?
+
+In Go programming, `float64` is a data type that represents a 64-bit floating-point number according to the IEEE 754 standard. It is one of the two primary floating-point types in Go, with the other being `float32`, which represents a 32-bit floating-point number.
+
+Here are some key characteristics of `float64`:
+
+1. **Precision:** `float64` provides higher precision compared to `float32`. It can represent a wider range of decimal values with greater accuracy. This makes it suitable for applications that require high precision, such as scientific computing and financial calculations.
+
+2. **Range:** The range of values that can be represented by `float64` is quite extensive. It can represent both very small and very large numbers, including both positive and negative values. The approximate range of `float64` is from about -1.8 × 10^308 to 1.8 × 10^308.
+
+3. **Usage:** `float64` is commonly used in Go for a wide range of tasks, including mathematical calculations, scientific simulations, graphics programming, and many other scenarios where real numbers with high precision are required.
+
+Here's an example of declaring and using a `float64` variable in Go:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var pi float64 = 3.14159265359
+    radius := 2.5
+    area := pi * (radius * radius)
+
+    fmt.Printf("The area of a circle with radius %.2f is %.2f\n", radius, area)
+}
+```
+
+In this example, `pi` is declared as a `float64` variable and used to calculate the area of a circle. The result is also a `float64` value. `%.2f` in the `Printf` statement is used to format the output to two decimal places.
+
+### ---------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
 
