@@ -2,7 +2,7 @@
 We will cover golang or go programming  from basic to advance
 
 # What is a function in Go programming ?
-### In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
+In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
 
 1. Function Declaration:
    You declare a function in Go using the `func` keyword followed by the function name, a list of parameters (if any), the return type (if any), and the function body enclosed in curly braces `{}`. For example:
