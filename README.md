@@ -91,7 +91,78 @@ func main() {
 
 In this example, `pi` is declared as a `float64` variable and used to calculate the area of a circle. The result is also a `float64` value. `%.2f` in the `Printf` statement is used to format the output to two decimal places.
 
-### ---------------------------------------------------------------------------------------------------
+### Parameters and return types in Go programming
+In Go programming, you can specify parameters and return types for functions to define their input requirements and the data they return. Here's how you declare and use parameters and return types in Go:
+
+### Function Parameters:
+
+Parameters are the input values that a function expects. You specify them within the parentheses following the function name.
+
+```go
+func functionName(param1Type paramName1, param2Type paramName2, ...) returnType {
+    // Function body
+}
+```
+
+- `functionName`: This is the name of the function.
+- `param1Type`, `param2Type`, ...: These are the types of the parameters that the function expects.
+- `paramName1`, `paramName2`, ...: These are the names of the parameters, which you can use within the function body to refer to the values passed as arguments.
+- `returnType`: This is the type of the value that the function will return. If the function doesn't return anything, you can specify `void` (i.e., no return type), but in Go, you typically use `funcName()`, where there's no explicit return type specified.
+
+Example:
+
+```go
+func add(x int, y int) int {
+    return x + y
+}
+```
+
+In this example, the `add` function takes two integer parameters, `x` and `y`, and returns an integer.
+
+### Function Return Types:
+
+Return types specify the type of value that a function returns to the caller. You specify the return type immediately after the parameter list (if any) using the `func` keyword.
+
+```go
+func functionName(param1Type, param2Type, ...) returnType {
+    // Function body
+    return returnValue
+}
+```
+
+- `returnType`: This is the type of the value that the function will return. If a function doesn't return anything, you don't specify a return type or use `funcName()`. If a function returns multiple values, you enclose them in parentheses.
+
+Example with a single return value:
+
+```go
+func add(x int, y int) int {
+    return x + y
+}
+```
+
+Example with multiple return values:
+
+```go
+func divide(x, y float64) (float64, error) {
+    if y == 0 {
+        return 0, errors.New("division by zero")
+    }
+    return x / y, nil
+}
+```
+
+In the second example, the `divide` function returns both a `float64` value and an `error` value.
+
+To call a function, you provide arguments that match the parameter types, and if the function returns a value, you can assign it to a variable or use it as needed:
+
+```go
+result := add(3, 5)
+quotient, err := divide(10.0, 2.0)
+```
+
+These are the basic concepts of parameters and return types in Go programming. They allow you to define the inputs and outputs of your functions, making your code modular and flexible.
+
+### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
 
