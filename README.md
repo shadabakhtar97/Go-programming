@@ -485,6 +485,8 @@ In this program:
 6. Finally, we print the updated value of `x` to confirm that it has been modified.
 
 When you run this program, you'll see that it demonstrates the concept of pointers in Go, where a pointer allows you to indirectly access and modify the value of a variable by referencing its memory address.
+### Example programs on structures in Go programming
+
 
 ### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
