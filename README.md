@@ -442,6 +442,50 @@ In this example, `%d` is used within the `Printf` function to format and print t
 
 You can use `%d` to format and display integer values in various contexts, including when you want to include integer values in strings or as part of more complex output formatting.
 
+### Example program on the pointer in Go programming
+Certainly! Here's an example program in Go that demonstrates the use of pointers:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Declare an integer variable 'x' and assign it a value
+    x := 10
+
+    // Declare a pointer variable 'ptr' of type int that points to the memory address of 'x'
+    var ptr *int
+    ptr = &x
+
+    // Print the value of 'x' and the memory address of 'x' using the pointer 'ptr'
+    fmt.Printf("Value of 'x': %d\n", x)
+    fmt.Printf("Memory Address of 'x': %p\n", ptr)
+
+    // Modify the value of 'x' indirectly through the pointer 'ptr'
+    *ptr = 20
+
+    // Print the updated value of 'x'
+    fmt.Printf("Updated Value of 'x': %d\n", x)
+}
+```
+
+In this program:
+
+1. We declare an integer variable `x` and assign it the value `10`.
+
+2. We declare a pointer variable `ptr` of type `*int`. The `*int` type indicates that `ptr` can hold the memory address of an integer variable.
+
+3. We use the `&` operator to assign the memory address of `x` to the pointer `ptr`.
+
+4. We print the initial value of `x` and the memory address of `x` using the pointer `ptr`.
+
+5. We use the `*` operator to modify the value of `x` indirectly through the pointer `ptr`. After this operation, `x` is set to `20`.
+
+6. Finally, we print the updated value of `x` to confirm that it has been modified.
+
+When you run this program, you'll see that it demonstrates the concept of pointers in Go, where a pointer allows you to indirectly access and modify the value of a variable by referencing its memory address.
+
 ### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
