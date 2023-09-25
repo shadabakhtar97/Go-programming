@@ -199,6 +199,47 @@ In this example, `&x` is used to obtain the memory address of the variable `x`, 
 
 It's worth noting that Go's pointer arithmetic is more restricted compared to some other languages like C or C++. Go does not support pointer arithmetic for arbitrary memory manipulation, which helps reduce certain types of bugs and security vulnerabilities. Pointers in Go are mainly used for referencing variables and passing them by reference to functions.
 
+### What is a Structure Go Programming?
+
+In Go programming, a structure (often referred to as a "struct") is a composite data type that groups together variables of different data types under a single name. It allows you to create custom data structures to represent complex data with multiple fields. Think of a struct as a way to define your own data types by combining existing data types.
+
+Here's how you declare and use a struct in Go:
+
+```go
+package main
+
+import "fmt"
+
+// Define a struct named 'Person' with two fields: 'Name' (string) and 'Age' (int)
+type Person struct {
+    Name string
+    Age  int
+}
+
+func main() {
+    // Create a new instance of the 'Person' struct
+    p1 := Person{
+        Name: "Alice",
+        Age:  30,
+    }
+
+    // Access and print the fields of the struct
+    fmt.Println("Name:", p1.Name)
+    fmt.Println("Age:", p1.Age)
+
+    // You can also create an instance without specifying field names if you provide values in the same order as the struct definition
+    p2 := Person{"Bob", 25}
+    fmt.Println("Name:", p2.Name)
+    fmt.Println("Age:", p2.Age)
+}
+```
+
+In this example, we define a struct named `Person` with two fields: `Name` (a string) and `Age` (an integer). We then create two instances of the `Person` struct (`p1` and `p2`) and access their fields using dot notation.
+
+Structs are commonly used in Go to represent data records, configuration settings, and more complex data structures like linked lists and trees. They are also used when working with libraries that require structured data, such as when decoding JSON or XML data into Go objects.
+
+Structs can also embed other structs or types, allowing you to create more complex nested data structures. This flexibility makes structs a fundamental building block for data modeling in Go.
+
 ### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
