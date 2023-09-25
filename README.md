@@ -360,6 +360,88 @@ In this example:
 
 By defining methods for a struct, you can encapsulate behaviors related to that struct, making your code more organized and maintainable. The methods associated with a struct operate on the data stored in the struct's fields.
 
+### The memory address of the variable in Go programming
+In Go programming, you can obtain the memory address of a variable using the `&` operator followed by the variable name. This operator is used to create a pointer to the memory location where the variable is stored. Here's an example:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Declare a variable 'x' and assign it a value
+    x := 10
+
+    // Use the '&' operator to obtain the memory address of 'x'
+    addr := &x
+
+    // Print the memory address and the value of 'x'
+    fmt.Printf("Memory Address of 'x': %p\n", addr)
+    fmt.Printf("Value of 'x': %d\n", x)
+}
+```
+
+In this example:
+
+1. We declare a variable `x` and assign it the value `10`.
+
+2. We use the `&` operator to obtain the memory address of `x` and assign it to the variable `addr`.
+
+3. We print both the memory address of `x` (`%p` format specifier) and the value of `x` (`%d` format specifier).
+
+When you run this code, you'll see that the memory address of `x` is printed, and it will typically be a hexadecimal number. Note that the actual memory address may vary each time you run the program, as it depends on the memory allocation by the Go runtime.
+
+Obtaining the memory address of a variable is often useful when you want to pass the variable by reference to functions or when you need to work with pointers to manipulate the variable's value indirectly.
+
+### %p format specifier in Go proramming
+In Go programming, the `%p` format specifier is used with the `Printf` family of functions (e.g., `fmt.Printf`) to format and print the memory address of a pointer variable. It is commonly used when you want to display the hexadecimal representation of a memory address.
+
+Here's an example of how `%p` is used:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Declare a variable 'x' and assign it a value
+    x := 10
+
+    // Use the '&' operator to obtain the memory address of 'x'
+    addr := &x
+
+    // Print the memory address of 'x' using the %p format specifier
+    fmt.Printf("Memory Address of 'x': %p\n", addr)
+}
+```
+
+In this example, `%p` is used within the `Printf` function to format and print the memory address stored in the `addr` variable. The output will typically be a hexadecimal representation of the memory address of the variable `x`.
+
+Keep in mind that the actual memory address may vary each time you run the program, as it depends on the memory allocation by the Go runtime.
+
+### %d\n format specifier in Go programming
+In Go programming, the `%d` format specifier is used with the `Printf` family of functions (e.g., `fmt.Printf`) to format and print an integer value in decimal notation. It is commonly used to display the value of integer variables.
+
+Here's an example of how `%d` is used:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Declare an integer variable 'x' and assign it a value
+    x := 42
+
+    // Print the value of 'x' using the %d format specifier
+    fmt.Printf("Value of 'x': %d\n", x)
+}
+```
+
+In this example, `%d` is used within the `Printf` function to format and print the integer value stored in the variable `x`. The output will be the decimal representation of the integer value, in this case, "42."
+
+You can use `%d` to format and display integer values in various contexts, including when you want to include integer values in strings or as part of more complex output formatting.
+
 ### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
