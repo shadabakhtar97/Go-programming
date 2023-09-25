@@ -300,6 +300,66 @@ In this example:
 
 By defining methods for a struct, you can encapsulate behaviors related to that struct, making your code more organized and maintainable. The methods associated with a struct operate on the data stored in the struct's fields.
 
+### How to create a structure type & operator in Go programming ?
+
+In Go programming, you can create your own structure types (structs) and define custom methods for them. Structs are composite data types that allow you to group together variables of different data types into a single unit. You can define methods for a struct to provide behaviors associated with that data type.
+
+Here's how you can create a struct type and define methods for it in Go:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+// Define a struct type named 'Rectangle' with two fields: 'Width' and 'Height'
+type Rectangle struct {
+    Width  float64
+    Height float64
+}
+
+// Define a method named 'Area' for the 'Rectangle' struct
+func (r Rectangle) Area() float64 {
+    return r.Width * r.Height
+}
+
+// Define a method named 'Perimeter' for the 'Rectangle' struct
+func (r Rectangle) Perimeter() float64 {
+    return 2*r.Width + 2*r.Height
+}
+
+func main() {
+    // Create an instance of the 'Rectangle' struct
+    rect := Rectangle{
+        Width:  10,
+        Height: 5,
+    }
+
+    // Call the 'Area' and 'Perimeter' methods on the 'rect' instance
+    area := rect.Area()
+    perimeter := rect.Perimeter()
+
+    // Print the results
+    fmt.Println("Rectangle Area:", area)
+    fmt.Println("Rectangle Perimeter:", perimeter)
+}
+```
+
+In this example:
+
+1. We define a `Rectangle` struct with two fields: `Width` and `Height`. These fields represent the dimensions of a rectangle.
+
+2. We define two methods associated with the `Rectangle` struct: `Area` and `Perimeter`. These methods are defined with a receiver, which is an instance of the `Rectangle` struct itself. The receiver is specified within parentheses before the method name, and it allows you to access the fields of the struct within the method.
+
+3. In the `main` function, we create an instance of the `Rectangle` struct named `rect` and set its `Width` and `Height` fields.
+
+4. We call the `Area` and `Perimeter` methods on the `rect` instance to calculate the area and perimeter of the rectangle.
+
+5. Finally, we print the results.
+
+By defining methods for a struct, you can encapsulate behaviors related to that struct, making your code more organized and maintainable. The methods associated with a struct operate on the data stored in the struct's fields.
+
 ### -----------------------------------------------------------------------------------------------------------------
 # Error Handling in Go Programming
 ### What is an Error in go programming ?
