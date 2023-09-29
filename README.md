@@ -741,6 +741,21 @@ Error handling is of paramount importance in Go programming for several reasons:
 10. **Compliance and Regulations:** In some industries or domains, there are regulatory requirements that mandate proper error handling. Failure to comply with these requirements can result in legal or financial consequences.
 
 In Go, error handling is considered a first-class citizen of the language, and the language provides a simple and effective mechanism for handling errors using the `error` interface. By following Go's error handling conventions, developers can write code that is both robust and maintainable, contributing to the overall success of their projects.
+### ---------------------------------------------------------------------------------------------------------------
+### What is meaning :=  in go programming ?
+In Go programming, := is a shorthand syntax for declaring and initializing variables. It is used for short variable declarations. Here's how it works:
 
+Instead of explicitly declaring the variable type with the `var` keyword, you can use := to infer the variable's type based on the value you're assigning to it. This makes your code more concise and readable.
 
+For example:
+
+```go
+name := "John"
+age := 30
+```
+
+In the code above, := is used to declare two variables, `name` and `age`, and initialize them with values. The Go compiler will automatically determine the variable types (string and int) based on the assigned values.
+
+This shorthand notation is particularly useful when you're declaring and initializing variables in a function or block scope, as it reduces redundancy and makes your code more efficient.
+### ---------------------------------------------------------------------------------------------------------------
 
