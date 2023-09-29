@@ -162,7 +162,7 @@ quotient, err := divide(10.0, 2.0)
 
 These are the basic concepts of parameters and return types in Go programming. They allow you to define the inputs and outputs of your functions, making your code modular and flexible.
 ### -----------------------------------------------------------------------------------------------------------------
-Diﬀerent types of functions in Go programming
+### Diﬀerent types of functions in Go programming
 In Go programming, functions are blocks of code that perform specific tasks or operations. There are several types of functions in Go, which can be categorized based on their characteristics and usage. Here are some of the common types of functions in Go:
 
 1. **Basic Functions**:
