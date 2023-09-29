@@ -254,7 +254,7 @@ In Go programming, functions are blocks of code that perform specific tasks or o
 These are some of the common types of functions in Go programming. Go provides a flexible and powerful set of tools for working with functions, allowing you to design and implement functions to suit various needs in your programs.
 ### -----------------------------------------------------------------------------------------------------------------
 ### Packages in Go programming language for beginner 
-If you're a beginner in the Go programming language (often referred to as Golang), there are several essential packages that you should be familiar with to get started with writing Go programs. Go has a rich standard library that provides many built-in packages for common tasks. Here are some fundamental packages to start with:
+There are several essential packages that you should be familiar with to get started with writing Go programs. Go has a rich standard library that provides many built-in packages for common tasks. Here are some fundamental packages to start with:
 
 1. `fmt`: The `fmt` package provides functions for formatted input and output. You'll frequently use `fmt.Println()` and `fmt.Printf()` for printing to the console.
 
