@@ -513,6 +513,57 @@ func main() {
 In this example, `printNumbers` is a Goroutine that prints numbers from 1 to 5 with a delay between each print. The `main` function starts this Goroutine using `go printNumbers()`, and it continues to execute its own logic concurrently. The `time.Sleep` calls are used to simulate some work being done in each Goroutine.
 
 Goroutines are a powerful way to achieve concurrency in Go, and they make it relatively easy to build efficient and scalable concurrent programs. However, it's essential to use channels and other synchronization primitives correctly to avoid race conditions and ensure safe concurrent access to shared data.
+
+### How to call a Goroutine function?
+To call a Goroutine function in Go, you simply use the `go` keyword followed by the function call. Here's the basic syntax:
+
+```go
+go functionName(arguments)
+```
+
+Here's a step-by-step guide on how to call a Goroutine function:
+
+1. Define a function that you want to execute concurrently as a Goroutine.
+
+2. Use the `go` keyword followed by the function call to start the Goroutine.
+
+3. The Go runtime will handle the scheduling and execution of the Goroutine in the background.
+
+Here's a practical example:
+
+```go
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func printNumbers() {
+    for i := 1; i <= 5; i++ {
+        fmt.Printf("%d ", i)
+        time.Sleep(time.Millisecond * 500)
+    }
+}
+
+func main() {
+    // Start a Goroutine to print numbers concurrently
+    go printNumbers()
+
+    // Print numbers in the main Goroutine
+    for i := 6; i <= 10; i++ {
+        fmt.Printf("%d ", i)
+        time.Sleep(time.Millisecond * 500)
+    }
+
+    // Give Goroutine some time to complete (not recommended in production)
+    time.Sleep(time.Second * 3)
+}
+```
+
+In this example, `printNumbers` is the Goroutine function, and we call it as `go printNumbers()` in the `main` function. When you run this program, you'll see that both the main Goroutine and the `printNumbers` Goroutine execute concurrently, and their output interleaves.
+
+Keep in mind that Goroutines are lightweight, so you can create and manage many of them within a single Go program. However, you should also consider synchronization mechanisms, such as channels, to coordinate Goroutines and ensure safe concurrent access to shared data when needed.
 ### -----------------------------------------------------------------------------------------------------------------
 # Pointers and Structures in Go programming
   ###  What is a Go programming pointer?
