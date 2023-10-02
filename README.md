@@ -1,7 +1,7 @@
 # Go-programming
 We will cover golang or go programming  from basic to advance
 ### -----------------------------------------------------------------------------------------------------------------
-### Here's a comparison of the Go language, C, C++, Java, and Python in tabular form based on various features and characteristics:
+### Comparison of the Go language, C, C++, Java, and Python in tabular form based on various features and characteristics:
 
 | Feature                    | Go           | C             | C++           | Java          | Python        |
 |----------------------------|--------------|---------------|---------------|---------------|---------------|
