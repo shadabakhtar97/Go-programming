@@ -140,6 +140,36 @@ func main() {
 
 In this example, two goroutines communicate through a channel, allowing data to be safely passed between them.
 ### -----------------------------------------------------------------------------------------------------------------
+### fallthrough in Golang
+In Go (Golang), the `fallthrough` keyword is used within a `switch` statement to indicate that control should transfer to the next `case` block, even if the condition for the `case` block with `fallthrough` is met. It is a way to specify that you want to "fall through" to the next case, executing its code regardless of whether the condition matches or not.
+
+Here's an example of how `fallthrough` works in a `switch` statement:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    num := 2
+
+    switch num {
+    case 1:
+        fmt.Println("One")
+    case 2:
+        fmt.Println("Two")
+        fallthrough // This will transfer control to the next case
+    case 3:
+        fmt.Println("Three")
+    }
+}
+```
+
+In this example, when `num` is equal to `2`, the `Two` case block is executed. After that, the `fallthrough` keyword is used, which causes control to transfer to the next `case` block, which is `3`, and the `Three` case block is also executed. Without `fallthrough`, the `switch` statement would exit after the first matching `case`.
+
+It's important to use `fallthrough` with caution because it can make code less predictable and harder to read. In most cases, you should be explicit in your `case` blocks and avoid unnecessary use of `fallthrough`. It's typically used in situations where you have a deliberate reason to execute code in multiple `case` blocks consecutively.
+
+### -----------------------------------------------------------------------------------------------------------------
 ### Issue: 01.go:5:11: missing import path
 ### Solution
 The error message you're encountering, "missing import path," typically indicates that there's an issue with how you are specifying or formatting an import statement in your Go source code. To resolve this issue, you should check your import statements and ensure they follow the correct syntax.
