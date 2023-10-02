@@ -36,6 +36,16 @@ The terms "fast" and "moderate" are relative and context-dependent when used to 
 
 In summary, the difference between "fast" and "moderate" lies in the speed and efficiency with which tasks are executed. "Fast" implies superior performance, often at the cost of complexity or resource consumption, while "moderate" indicates a reasonable level of performance without extreme optimizations or trade-offs. The choice between the two depends on the specific requirements of a given project or application.
 ### -----------------------------------------------------------------------------------------------------------------
+### Steeper means in programming
+In programming and software development, when we say that something has a "steeper" learning curve, we are referring to the level of difficulty or complexity associated with learning and becoming proficient in a particular technology, programming language, framework, or concept. 
+
+A "steeper" learning curve means that it is more challenging and may take more time and effort to grasp and become proficient in compared to something with a "gentler" or "shallower" learning curve, which is easier and quicker to learn.
+
+Some programming languages, frameworks, or technologies are known for having steeper learning curves due to factors such as complex syntax, a large number of features, a steep initial setup, or a need to understand intricate concepts. Conversely, languages or tools with a gentler learning curve are generally easier for beginners to pick up and start using effectively.
+
+It's important to note that a steeper learning curve does not necessarily mean a technology is inherently bad or inferior; it may just require more dedication and effort to become skilled in it. Developers often choose tools and technologies based on their specific project requirements, team expertise, and long-term goals, considering both the learning curve and the potential benefits.
+
+### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
 
 In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
