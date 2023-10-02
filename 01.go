@@ -1,4 +1,4 @@
-// Go Hello World Program
+// Go Hello World Program Using "Println" Function
 
 package main
 
