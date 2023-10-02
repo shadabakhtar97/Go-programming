@@ -44,6 +44,35 @@ A "steeper" learning curve means that it is more challenging and may take more t
 Some programming languages, frameworks, or technologies are known for having steeper learning curves due to factors such as complex syntax, a large number of features, a steep initial setup, or a need to understand intricate concepts. Conversely, languages or tools with a gentler learning curve are generally easier for beginners to pick up and start using effectively.
 
 It's important to note that a steeper learning curve does not necessarily mean a technology is inherently bad or inferior; it may just require more dedication and effort to become skilled in it. Developers often choose tools and technologies based on their specific project requirements, team expertise, and long-term goals, considering both the learning curve and the potential benefits.
+### -----------------------------------------------------------------------------------------------------------------
+### Total number of keywords in go programming langauge
+Go also known as Golang has 25 keywords. Here's the list of Go programming language keywords:
+
+1. break
+2. default
+3. func
+4. interface
+5. select
+6. case
+7. defer
+8. go
+9. map
+10. struct
+11. chan
+12. else
+13. goto
+14. package
+15. switch
+16. const
+17. fallthrough
+18. if
+19. range
+20. type
+21. continue
+22. for
+23. import
+24. return
+25. var
 
 ### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
