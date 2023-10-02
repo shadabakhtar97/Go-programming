@@ -74,6 +74,72 @@ Go also known as Golang has 25 keywords. Here's the list of Go programming langu
 24. return
 25. var
 ### -----------------------------------------------------------------------------------------------------------------
+### chan keyword in golang
+In the Go programming language (Golang), the `chan` keyword is used to declare and work with channels. Channels are a fundamental concurrency primitive in Go and are used for communication and synchronization between goroutines (concurrently executing functions or threads).
+
+Here's how the `chan` keyword is used in Go:
+
+1. **Declaring Channels:**
+   - To declare a channel, you use the `chan` keyword followed by the type of data that the channel will transmit.
+   - Example:
+     ```go
+     var ch1 chan int         // Declares a channel for transmitting integers.
+     var ch2 chan string      // Declares a channel for transmitting strings.
+     ```
+
+2. **Creating Channels:**
+   - Channels can be created using the built-in `make` function.
+   - Example:
+     ```go
+     ch := make(chan int)     // Creates an integer channel.
+     ```
+
+3. **Sending and Receiving Data:**
+   - You can use the `<-` operator to send data into a channel and receive data from a channel.
+   - Example:
+     ```go
+     ch <- 42                 // Sends the integer value 42 into the channel.
+     x := <-ch                // Receives an integer from the channel and assigns it to variable x.
+     ```
+
+4. **Blocking Operations:**
+   - Sending to a channel blocks until there is a receiver ready to receive the data.
+   - Receiving from a channel blocks until there is data available to receive.
+   - This blocking behavior allows goroutines to synchronize their actions.
+
+Channels are a powerful tool for managing concurrent code in Go and are often used for passing data between goroutines, coordinating goroutines, and preventing race conditions.
+
+Here's a simple example of how channels can be used for communication between two goroutines:
+
+```go
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    ch := make(chan int)
+
+    // Sender goroutine
+    go func() {
+        ch <- 42 // Send the value 42 into the channel
+    }()
+
+    // Receiver goroutine
+    go func() {
+        value := <-ch // Receive a value from the channel
+        fmt.Println("Received:", value)
+    }()
+
+    // Allow some time for goroutines to finish
+    time.Sleep(time.Second)
+}
+```
+
+In this example, two goroutines communicate through a channel, allowing data to be safely passed between them.
+### -----------------------------------------------------------------------------------------------------------------
 ### Issue: 01.go:5:11: missing import path
 ### Solution
 The error message you're encountering, "missing import path," typically indicates that there's an issue with how you are specifying or formatting an import statement in your Go source code. To resolve this issue, you should check your import statements and ensure they follow the correct syntax.
