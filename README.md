@@ -31,6 +31,35 @@ When you compile and run this program, it will print "Hello, world!" to the cons
 
 The `main` package and the `main` function are essential components of every Go executable program, and they provide a clear starting point for the execution of your code.
 ### -----------------------------------------------------------------------------------------------------------------
+### import "fmt" means in golang
+In Go (Golang), the `import "fmt"` statement is used to import the "fmt" package, which is part of the Go standard library. The "fmt" package provides functions and methods for formatting and printing text to the standard output (usually the console) and reading input from the standard input.
+
+Here's what the `import "fmt"` statement means in Go:
+
+1. **Import Statement**: In Go, you use the `import` keyword followed by the package path to include external packages in your code.
+
+2. **"fmt" Package**: The "fmt" package is a built-in package provided by the Go standard library, and it is short for "format." It offers functions for formatted input and output. Commonly used functions from the "fmt" package include `Println`, `Printf`, `Scanf`, and many more.
+
+   - `fmt.Println(args ...interface{})`: This function is used to print one or more values to the standard output, with automatic formatting and a newline character at the end.
+   - `fmt.Printf(format string, args ...interface{})`: This function allows you to format and print values to the standard output using format specifiers.
+   - `fmt.Scanf(format string, args ...interface{})`: This function is used to read formatted input from the standard input.
+
+By importing "fmt," you gain access to these and other formatting and printing functions, which are useful for interacting with users, logging, and displaying program output.
+
+Here's a simple example of using the "fmt" package to print "Hello, world!" to the console:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+```
+
+In this code, `import "fmt"` makes the functions from the "fmt" package available for use within the `main` function, allowing you to use `fmt.Println` to print the text to the standard output.
+### -----------------------------------------------------------------------------------------------------------------
 ### Comparison of the Go language, C, C++, Java, and Python in tabular form based on various features and characteristics:
 
 | Feature                    | Go           | C             | C++           | Java          | Python        |
