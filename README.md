@@ -1,6 +1,36 @@
 # Go-programming
 We will cover golang or go programming  from basic to advance
 ### -----------------------------------------------------------------------------------------------------------------
+### "package main" What is main in Golang
+In Go (Golang), the `package main` declaration is used to indicate that a Go source code file is intended to be the starting point of a standalone executable program. In other words, when you write a Go program that you want to compile and run as an independent executable, it should belong to the `main` package.
+
+Here's how it works:
+
+1. **`package main`**: The `package` keyword is used to declare the package to which the source code belongs. In this case, `main` is a special package name. The `main` package is unique because it's the entry point for the Go program, and it must contain a `main` function.
+
+2. **`func main()`**: Within the `main` package, you must have a function named `main`. This function serves as the entry point for the program. When you run the compiled Go program, the `main` function is executed first.
+
+Here's a simple example of a minimal Go program with `package main`:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+```
+
+In this program:
+
+- `package main` declares that this is a standalone executable program.
+- `func main()` is the entry point of the program, and it prints "Hello, world!" to the standard output.
+
+When you compile and run this program, it will print "Hello, world!" to the console.
+
+The `main` package and the `main` function are essential components of every Go executable program, and they provide a clear starting point for the execution of your code.
+### -----------------------------------------------------------------------------------------------------------------
 ### Comparison of the Go language, C, C++, Java, and Python in tabular form based on various features and characteristics:
 
 | Feature                    | Go           | C             | C++           | Java          | Python        |
