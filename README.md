@@ -73,6 +73,43 @@ Go also known as Golang has 25 keywords. Here's the list of Go programming langu
 23. import
 24. return
 25. var
+### -----------------------------------------------------------------------------------------------------------------
+### Issue: 01.go:5:11: missing import path
+The error message you're encountering, "missing import path," typically indicates that there's an issue with how you are specifying or formatting an import statement in your Go source code. To resolve this issue, you should check your import statements and ensure they follow the correct syntax.
+
+Here are some common causes and solutions for the "missing import path" error in Go:
+
+1. **Missing Import Path**:
+   - Ensure that you have provided the correct import path within double quotes after the `import` keyword.
+   - Example: `import "fmt"`.
+
+2. **Incorrect Package Name**:
+   - Verify that you are importing a valid Go package that exists in your project or is installed in your Go environment.
+   - Double-check the package name and path for any typos or mistakes.
+
+3. **File Location**:
+   - Make sure that the package you are trying to import is located in the correct directory relative to your Go source code file.
+   - If the package is not in the standard library or your project directory, you may need to specify a full import path (e.g., `"github.com/user/package"`).
+
+4. **Module Initialization**:
+   - If you are working in a Go module, ensure that you have initialized the module using `go mod init` and that the module contains a `go.mod` file.
+
+5. **IDE or Text Editor Issues**:
+   - Sometimes, IDEs or text editors can introduce formatting errors or issues with import statements. Ensure that your code editor is not adding any extra characters or syntax.
+
+Here's an example of a correct import statement in Go:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+```
+
+If you can provide more specific details about your code or the import statement causing the issue, I can provide more targeted assistance.
 
 ### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
