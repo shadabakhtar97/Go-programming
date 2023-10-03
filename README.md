@@ -415,6 +415,26 @@ func main() {
 ```
 
 In this example, `pi` is declared as a `float64` variable and used to calculate the area of a circle. The result is also a `float64` value. `%.2f` in the `Printf` statement is used to format the output to two decimal places.
+### --------------------------------------------------------------------------------------------------------
+### Please explain about this  %.100f in golang
+In Go, the `%.100f` format specifier is used in a `Printf` or `Sprintf` function to format a floating-point number as a string with a specific precision. Here's what each part of `%.100f` means:
+
+- `%`: This is the format specifier that indicates that you want to format a value and insert it into a string.
+
+- `.100`: This is known as the precision specifier. In this case, it specifies that you want to display the floating-point number with a precision of 100 decimal places.
+
+- `f`: This is the format character that specifies that the value you want to format is a floating-point number.
+
+So, when you use `%.100f` with `Printf` or `Sprintf` in Go, it will format a floating-point number with a precision of 100 decimal places. This can be useful when you need to display extremely precise or high-precision decimal values, such as in scientific or financial calculations.
+### --------------------------------------------------------------------------------------------------------
+### What is range of float64 in golang?
+In Go (Golang), the `float64` data type represents a 64-bit floating-point number according to the IEEE 754 standard. This means it can represent a wide range of real numbers, both positive and negative, with a high degree of precision. Here are the details of `float64`:
+
+- **Range**: Approximately ±1.7 × 10^308 to ±5.0 × 10^-324
+
+- **Precision**: About 15 to 17 decimal digits of precision
+
+In simpler terms, `float64` can represent very large and very small numbers with up to 15 to 17 significant decimal digits. It's suitable for most general-purpose floating-point calculations and is commonly used for tasks involving real numbers in scientific, engineering, and mathematical applications. However, it's important to note that `float64` has limited precision, and it can encounter rounding errors in some situations, so it might not be suitable for applications requiring arbitrary precision arithmetic.
 
 ### Parameters and return types in Go programming
 In Go programming, you can specify parameters and return types for functions to define their input requirements and the data they return. Here's how you declare and use parameters and return types in Go:
