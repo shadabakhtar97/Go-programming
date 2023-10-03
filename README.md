@@ -309,6 +309,23 @@ x := 10 // Implicitly declares a variable "x" of type "int"
 
 In the second example, Go infers that `x` is of type `int` based on the value `10` you assigned to it, and you didn't explicitly specify the type.
 ### -----------------------------------------------------------------------------------------------------------------
+### Go programming language unique design philosophy 
+Go, also known as the Go programming language, has a unique design philosophy compared to some other object-oriented languages. While Go does support object-oriented programming (OOP) concepts to some extent, it does not fully adhere to traditional OOP principles found in languages like Java or C++.
+
+Here's how Go approaches OOP concepts:
+
+Structs instead of Classes: In Go, you can define structs to group data together, similar to classes in OOP languages. However, Go does not have classes in the traditional sense with inheritance, polymorphism, and encapsulation.
+
+Methods: You can associate methods with structs in Go, which act like functions that operate on specific types. This provides a form of encapsulation and allows you to define behavior associated with data structures.
+
+Interfaces: Go has interfaces, which are used to define sets of methods that a type must implement. Interfaces enable polymorphism in Go by allowing different types to satisfy the same interface, even if they don't share a common inheritance hierarchy.
+
+Composition over Inheritance: Go encourages composition over inheritance. Instead of using class hierarchies for code reuse, you typically embed one struct within another to reuse behavior. This approach promotes simplicity and flexibility.
+
+No Constructor or Destructor: Go doesn't have constructors or destructors as seen in some OOP languages. Instead, you typically create instances of structs directly and rely on Go's garbage collector for memory management.
+
+In summary, Go borrows some concepts from OOP but has its own unique approach to structuring and organizing code. It emphasizes simplicity, concurrency, and efficient performance, which may lead to different design choices compared to more traditional OOP languages. Developers coming from a traditional OOP background may need to adapt their thinking when working with Go
+### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
 
 In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
