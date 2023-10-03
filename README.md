@@ -288,6 +288,27 @@ func main() {
 
 Ensure that any function declarations, control structures, or blocks of code are properly indented and follow the expected Go syntax rules. If you can provide more specific details about your code, I can offer more targeted assistance.
 ### -----------------------------------------------------------------------------------------------------------------
+### What is meaning of explicitly and implicit in Golang?
+In Go (Golang):
+
+- **Explicit** typically refers to actions or behaviors that are clearly stated, defined, or declared by the programmer in a straightforward manner. When you do something explicitly in Go, you are making it very clear and specific.
+
+- **Implicit** means something that is understood or done without being stated directly. In Go, implicit behavior often involves actions or rules that are automatically applied by the language or inferred from context, without the need for explicit declarations or statements.
+
+For example, when you declare a variable with the `var` keyword and specify its type explicitly, that's an explicit declaration:
+
+```go
+var x int = 10 // Explicitly declares a variable "x" of type "int"
+```
+
+On the other hand, when Go infers the type of a variable based on the value you assign to it, that's an implicit type declaration:
+
+```go
+x := 10 // Implicitly declares a variable "x" of type "int"
+```
+
+In the second example, Go infers that `x` is of type `int` based on the value `10` you assigned to it, and you didn't explicitly specify the type.
+### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
 
 In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
