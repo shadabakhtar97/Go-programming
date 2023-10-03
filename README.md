@@ -1,6 +1,22 @@
 # Go-programming
 We will cover golang or go programming  from basic to advance
 ### -----------------------------------------------------------------------------------------------------------------
+### Go Commands
+`sumdb` in Go (Golang) refers to the "go.sum database." It's a part of Go's module system introduced to enhance the security and integrity of module-based development.
+
+Here's a brief explanation of `sumdb`:
+
+1. **Module Sum Files**: When you use modules in your Go project (which is a standard way to manage dependencies starting from Go 1.11), the Go toolchain generates and uses a `go.sum` file. This file contains checksums (hashes) of the content of all the dependencies used in your project.
+
+2. **`sum.golang.org`**: To improve security, Go introduced `sum.golang.org`, which is a server that stores these checksums centrally. It's often referred to as the `sumdb`. The centralization of checksums helps ensure that the dependencies you download are the same as what was intended by the module authors.
+
+3. **Verification**: When you `go get` or `go build` your Go project, the Go toolchain will verify the checksums of your dependencies against those stored in the `sumdb` to ensure that the content hasn't been tampered with or changed unexpectedly.
+
+4. **Security**: The `sumdb` adds an extra layer of security to the Go module ecosystem by preventing attackers from replacing the content of dependencies with malicious code without also updating the checksums in a consistent way.
+
+5. **Transparency**: The `sumdb` is designed to be transparent, and you can see the checksums and information about modules stored there by visiting `https://sum.golang.org`.
+
+### -----------------------------------------------------------------------------------------------------------------
 ### "package main" What is main in Golang
 In Go (Golang), the `package main` declaration is used to indicate that a Go source code file is intended to be the starting point of a standalone executable program. In other words, when you write a Go program that you want to compile and run as an independent executable, it should belong to the `main` package.
 
