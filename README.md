@@ -361,6 +361,31 @@ No Constructor or Destructor: Go doesn't have constructors or destructors as see
 
 In summary, Go borrows some concepts from OOP but has its own unique approach to structuring and organizing code. It emphasizes simplicity, concurrency, and efficient performance, which may lead to different design choices compared to more traditional OOP languages. Developers coming from a traditional OOP background may need to adapt their thinking when working with Go
 ### -----------------------------------------------------------------------------------------------------------------
+### What is bufio in Golang?
+In Go (Golang), the `bufio` package provides functionality for buffered input and output operations. It enhances I/O operations by using buffers, making reading and writing more efficient, especially when dealing with streams or files. The `bufio` package includes two main types: `bufio.Reader` and `bufio.Writer`, as well as a `bufio.Scanner` for tokenizing input. Here's a brief overview of each:
+
+1. **`bufio.Reader`**:
+   - `bufio.Reader` is a type used to read data from an `io.Reader` source with buffering.
+   - It reads data in larger chunks and stores it in an internal buffer, which reduces the number of system calls and enhances performance when reading data.
+   - You can create a `bufio.Reader` by calling `bufio.NewReader(io.Reader)`, where `io.Reader` can be any input source such as a file, network connection, or standard input (e.g., `os.Stdin`).
+   - Methods like `Read`, `ReadString`, and `ReadLine` are available for reading data from the buffered reader.
+
+2. **`bufio.Writer`**:
+   - `bufio.Writer` is a type used for buffered output operations to an `io.Writer` destination.
+   - It accumulates data in an internal buffer before actually writing it to the underlying `io.Writer`.
+   - This can be particularly useful when you need to minimize the number of write system calls, improving the efficiency of writing operations.
+   - You can create a `bufio.Writer` by calling `bufio.NewWriter(io.Writer)`, where `io.Writer` can be any output destination, such as a file, network connection, or standard output (e.g., `os.Stdout`).
+   - Methods like `Write` and `WriteString` are available for writing data to the buffered writer.
+
+3. **`bufio.Scanner`**:
+   - `bufio.Scanner` is a type used for tokenizing input from an `io.Reader`.
+   - It allows you to read and process input by splitting it into tokens based on a specified delimiter (by default, it splits on lines).
+   - You can create a `bufio.Scanner` by calling `bufio.NewScanner(io.Reader)`.
+   - It provides methods like `Scan` for reading the next token, and `Text` for retrieving the current token as a string.
+
+Using the `bufio` package can significantly improve the efficiency of input and output operations in your Go programs, especially when dealing with large data sets. It's commonly used when working with files, network communication, and other I/O-related tasks.
+
+### -----------------------------------------------------------------------------------------------------------------
 ### What is a function in Go programming ?
 
 In the Go programming language (often referred to as Golang), a function is a reusable block of code that performs a specific task or set of tasks. Functions are a fundamental building block of Go programs and are used to organize and modularize code. Here are some key characteristics and syntax for defining and using functions in Go:
