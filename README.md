@@ -2,6 +2,7 @@
 We will cover golang or go programming  from basic to advance
 ### -----------------------------------------------------------------------------------------------------------------
 ### Go Commands
+
 `sumdb` in Go (Golang) refers to the "go.sum database." It's a part of Go's module system introduced to enhance the security and integrity of module-based development.
 
 Here's a brief explanation of `sumdb`:
@@ -324,6 +325,24 @@ x := 10 // Implicitly declares a variable "x" of type "int"
 ```
 
 In the second example, Go infers that `x` is of type `int` based on the value `10` you assigned to it, and you didn't explicitly specify the type.
+### -----------------------------------------------------------------------------------------------------------------
+### What is lexer in Golang ?
+In Go (Golang), a lexer (short for "lexical analyzer") is a fundamental component of a compiler or interpreter. Its primary role is to take the source code of a program and break it down into a sequence of smaller units called "tokens." These tokens are the basic building blocks of the source code, representing individual meaningful elements such as keywords, identifiers, literals, and symbols.
+
+Here's how a lexer works in Go and in many other programming languages:
+
+1. **Scanning**: The lexer scans the source code character by character from left to right. It recognizes patterns in the characters to identify tokens. For example, it might recognize `if` as a keyword, `123` as an integer literal, or `=` as an assignment operator.
+
+2. **Tokenization**: When the lexer identifies a sequence of characters that form a valid token, it creates a token object and records its type and value. Each token typically has two main properties: a type (e.g., keyword, identifier, operator) and a value (the actual text of the token).
+
+3. **Ignoring Whitespace and Comments**: The lexer often ignores whitespace characters (such as spaces and tabs) and comments (if specified in the language) because they are not relevant for further processing.
+
+4. **Error Handling**: If the lexer encounters invalid or unexpected characters or sequences that don't match any known token, it may generate an error or issue a diagnostic message to indicate a lexical error.
+
+5. **Output**: The lexer produces a stream of tokens as its output, which is then passed to the next stage of the compiler or interpreter (usually the parser). The parser uses these tokens to build the abstract syntax tree (AST) and perform further analysis and code generation.
+
+In the context of Go, lexers are commonly used when building custom parsers or when implementing code analysis tools, interpreters, or compilers for domain-specific languages. Many Go packages and libraries provide lexer implementations that you can use as building blocks for various language processing tasks.
+
 ### -----------------------------------------------------------------------------------------------------------------
 ### Go programming language unique design philosophy 
 Go, also known as the Go programming language, has a unique design philosophy compared to some other object-oriented languages. While Go does support object-oriented programming (OOP) concepts to some extent, it does not fully adhere to traditional OOP principles found in languages like Java or C++.
