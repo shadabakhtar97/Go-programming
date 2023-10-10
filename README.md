@@ -33,7 +33,6 @@ Structs are commonly used in Go for organizing and representing data, making it 
 Different use cases using structs:
 
 1. **Person Information:**
-
 ```go
 package main
 
