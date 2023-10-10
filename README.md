@@ -3,6 +3,7 @@
 We will cover golang or go programming  from basic to advance
 
 ### ------------------------------
+### Stuct in Golang
 In Go (or Golang), a `struct` is a composite data type used for grouping together variables with different data types under a single name. It's similar to a class in object-oriented programming languages but lacks methods. 
 
 Here's a basic example of a struct definition in Go:
